@@ -1,0 +1,42 @@
+[submodule "xah-fly-keys"]
+	path = packages/xah-fly-keys
+	url = https://github.com/xahlee/xah-fly-keys.git
+[submodule "org-bullets"]
+	path = packages/org-bullets
+	url = https://github.com/sabof/org-bullets.git
+[submodule "compat"]
+	path = packages/compat
+	url = https://github.com/emacs-compat/compat.git
+[submodule "ef-themes"]
+	path = packages/ef-themes
+	url = https://github.com/protesilaos/ef-themes.git
+[submodule "marginalia"]
+	path = packages/marginalia
+	url = https://github.com/minad/marginalia.git
+[submodule "orderless"]
+	path = packages/orderless
+	url = https://github.com/oantolin/orderless.git
+[submodule "org-auto-tangle"]
+	path = packages/org-auto-tangle
+	url = https://github.com/yilkalargaw/org-auto-tangle.git
+[submodule "vertico"]
+	path = packages/vertico
+	url = https://github.com/minad/vertico.git
+[submodule "with-editor"]
+	path = packages/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "dash"]
+	path = packages/dash
+	url = https://github.com/magnars/dash.el.git
+[submodule "async"]
+	path = packages/async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "which-key"]
+	path = packages/which-key
+	url = https://github.com/justbur/emacs-which-key.git
+[submodule "olivetti"]
+	path = packages/olivetti
+	url = https://github.com/rnkn/olivetti.git
+[submodule "magit"]
+	path = packages/magit
+	url = https://github.com/magit/magit.git

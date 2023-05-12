@@ -1,0 +1,44 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/org-auto-tangle-autoloads.el
+/org-auto-tangle-pkg.el
+elpa/
+/elpa/
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+projectile*
+
+
+# directory configuration
+.dir-locals.el
