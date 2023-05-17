@@ -11,11 +11,6 @@
 (menu-bar-mode -1)
 (setq visible-bell t)     ; i think i might like this??...
 
-;;; zamansky trying these out
-;; what is fset
-(fset 'yes-or-no-p 'y-or-n-p)
-(global-set-key (kbd "<f7>") 'revert-buffer)
-
 (setq initial-scratch-message nil)
 
 ;; "C-x b" seems to be handling this now!?...
@@ -43,8 +38,10 @@
       (list
        "async"
        "compat"
+       "consult"
        "dash"
        "ef-themes"
+       "keycast"
        "magit/lisp"
        "marginalia"
        "olivetti"
@@ -57,11 +54,7 @@
        "xah-fly-keys"))
 (dolist (package packages) (add-to-list 'load-path (concat packages-root-path package)))
 
-;; this is prots font there are several to choose from
-;; find out how to get font names easily... 
-;; (set-face-attribute 'default nil :font "Iosevka Comfy Wide" :height 140)
 (set-face-attribute 'default nil :font "Iosevka Comfy Extrabold" :height 150)
-;; (set-face-attribute 'default nil :font "Iosevka Comfy Motion" :height 160)
 
 (setq modus-themes-italic-constructs t
       modus-themes-bold-constructs t)
@@ -87,14 +80,27 @@
 
 (require 'xah-fly-keys)
 (xah-fly-keys-set-layout "qwerty")
+(setq xah-fly-use-control-key nil)
+(setq xah-fly-use-meta-key nil)
 (xah-fly-keys 1)
+
+(define-key xah-fly-command-map (kbd "2") 'split-window-below)
+(define-key xah-fly-command-map (kbd "4") 'split-window-right)
+
+(define-key xah-fly-leader-key-map (kbd "X") 'execute-extended-command-for-buffer)
+(define-key xah-fly-leader-key-map (kbd "f") 'consult-buffer)
+
+(define-key xah-fly-leader-key-map (kbd "SPC") 'nil)
+(define-key xah-fly-leader-key-map (kbd "SPC SPC") 'xah-fly-insert-mode-activate)
+(define-key xah-fly-leader-key-map (kbd "SPC x") 'execute-extended-command-for-buffer)
+(define-key xah-fly-leader-key-map (kbd "SPC i") 'ielm)
 
 (require 'org-auto-tangle)
 (add-hook 'org-mode-hook 'org-auto-tangle-mode)
 (setq org-auto-tangle-default t)  ;; dont do it this way
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(require 'org-tempo)   ;; makes <s<TAB> source code snippet (doesnt seem to work)
+(require 'org-tempo)   ;; makes <s<TAB> source code snippet
 
 (require 'magit)
 (with-eval-after-load 'info
@@ -111,5 +117,18 @@
 (require 'orderless)
 (setq completion-styles '(orderless basic)
   completion-category-overrides '((file (styles basic partial-completion))))
+
+(require 'consult)
+(define-key global-map (kbd "C-x b") #'consult-buffer)
+(define-key global-map (kbd "<f6>") #'consult-theme)
+(define-key global-map (kbd "C-s") #'consult-line)
+
+(defalias 'isearch-forward 'consult-line)
+
+(require 'keycast)
+(keycast-mode-line-mode 1)
+
+(require 'which-key)
+(which-key-mode 1)
 
 (require 'olivetti)

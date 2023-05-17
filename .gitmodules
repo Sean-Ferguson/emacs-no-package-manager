@@ -32,7 +32,7 @@
 	path = packages/async
 	url = https://github.com/jwiegley/emacs-async.git
 [submodule "which-key"]
-	path = packages/which-key
+	path = packages/whfic-key
 	url = https://github.com/justbur/emacs-which-key.git
 [submodule "olivetti"]
 	path = packages/olivetti
@@ -40,3 +40,9 @@
 [submodule "magit"]
 	path = packages/magit
 	url = https://github.com/magit/magit.git
+[submodule "keycast"]
+	path = packages/keycast
+	url = https://github.com/tarsius/keycast.git
+[submodule "consult"]
+	path = packages/consult
+	url = https://github.com/minad/consult.git
