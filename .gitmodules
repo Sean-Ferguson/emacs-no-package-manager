@@ -46,3 +46,24 @@
 [submodule "consult"]
 	path = packages/consult
 	url = https://github.com/minad/consult.git
+[submodule "rainbow-delimiters"]
+	path = packages/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters.git
+[submodule "highlight-numbers"]
+	path = packages/highlight-numbers
+	url = https://github.com/Fanael/highlight-numbers.git
+[submodule "parent-mode"]
+	path = packages/parent-mode
+	url = https://github.com/Fanael/parent-mode.git
+[submodule "helpful"]
+	path = packages/helpful
+	url = https://github.com/Wilfred/helpful.git
+[submodule "elisp-refs"]
+	path = packages/elisp-refs
+	url = https://github.com/Wilfred/elisp-refs.git
+[submodule "s"]
+	path = packages/s
+	url = https://github.com/magnars/s.el.git
+[submodule "f"]
+	path = packages/f
+	url = https://github.com/rejeep/f.el.git
